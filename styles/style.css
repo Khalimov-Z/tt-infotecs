@@ -1,0 +1,208 @@
+@charset "UTF-8";
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.minimized {
+  display: none;
+}
+
+/* container section начало */
+.container {
+  margin: 30px 10px;
+  display: flex;
+  /* container__left начало */
+  /* container__left конец */
+  /* container__right начало*/
+  /* container__right конец*/
+}
+.container__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* table section начало*/
+  /* table section конец*/
+  /* container__left__buttons начало*/
+  /* container__left__buttons конец*/
+  /* container__left__pagination начало*/
+  /* container__left__pagination конец*/
+}
+.container__left .table {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+.container__left .table th, .container__left .table td {
+  border: 1px solid #e0e0e0;
+  padding: 5px 8px;
+  text-align: center;
+}
+.container__left .table th {
+  background: rgb(177, 184, 204);
+}
+.container__left .table tr:nth-child(odd) {
+  background: #fff;
+}
+.container__left .table tr:nth-child(even) {
+  background: #e7ebf0;
+}
+.container__left .table td.about > div {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.container__left .table th.sorted[data-order="1"],
+.container__left .table th.sorted[data-order="-1"] {
+  position: relative;
+}
+.container__left .table th.sorted[data-order="1"]::after,
+.container__left .table th.sorted[data-order="-1"]::after {
+  right: 3px;
+  position: absolute;
+}
+.container__left .table th.sorted[data-order="-1"]::after {
+  content: "▼";
+}
+.container__left .table th.sorted[data-order="1"]::after {
+  content: "▲";
+}
+.container__left .caption {
+  font-size: 14px;
+  font-family: "Comfortaa", cursive;
+  font-weight: bolder;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.container__left__buttons__btn-hide {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-family: "Comfortaa", cursive;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px 0, rgba(0, 0, 0, 0.2) 1px 1px 2px 0;
+  background: #e7ebf0;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+.container__left__buttons__btn-hide:hover {
+  border-radius: 5px;
+  background: rgb(177, 184, 204);
+  color: #fff;
+}
+.container__left__buttons__hidden-column {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+.container__left .container__left__buttons__btn-hide.crossed-out {
+  text-decoration: line-through;
+}
+.container__left__pagination {
+  margin: 10px 0 0 auto;
+}
+.container__left__pagination__btn {
+  font-family: "Comfortaa", cursive;
+  margin-right: 3px;
+}
+.container__left__pagination__btn:hover {
+  border-radius: 5px;
+  background: rgb(177, 184, 204);
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0 3px 5px 0, inset rgba(0, 0, 0, 0.2) 1px 1px 2px 0;
+  color: #fff;
+}
+.container__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* editor section начало*/
+  /* editor section конец*/
+}
+.container__right .editor {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.container__right .editor__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.container__right .editor__save-btn, .container__right .editor__cancel-btn {
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  font-family: "Comfortaa", cursive;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #524f4e;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px 0, rgba(0, 0, 0, 0.2) 1px 1px 2px 0;
+  transition: 0.3s;
+}
+.container__right .editor__save-btn:hover, .container__right .editor__cancel-btn:hover {
+  background: rgb(177, 184, 204);
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0 3px 5px 0, inset rgba(0, 0, 0, 0.2) 1px 1px 2px 0;
+  color: #fff;
+  transform: translateY(-7px);
+}
+.container__right .editor__form_field:not(:first-child),
+.container__right .editor__form_submit {
+  margin-top: 0.5rem;
+}
+.container__right .editor__form_field {
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.container__right .editor__form_field input,
+.container__right .editor__form_field textarea {
+  margin-left: 0.5rem;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  font-family: "Comfortaa", cursive;
+  margin-bottom: 10px;
+}
+.container__right .editor__form_field textarea {
+  resize: vertical;
+}
+.container__right .editor__form_submit {
+  padding: 8px 16px;
+}
+
+/* container section конец */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>infotecs</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+</html>
+<body>
+<div class="container">
+    <div class="container__left">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="caption table__name">
+                    Name
+                </th>
+                <th class="caption table__last-name">
+                    Last name
+                </th>
+                <th class="caption table__about">
+                    About
+                </th>
+                <th class="caption table__eye-color">
+                    Eye color
+                </th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        <div class="container__left__buttons">
+            <button class="container__left__buttons__btn-hide" id="name">
+                Name<span class="container__left__hidden-column" data-hidden="off"></span>
+            </button>
+            <button class="container__left__buttons__btn-hide" id="lastName">
+                Last name<span class="container__left__hidden-column" data-hidden="off"></span>
+            </button>
+            <button class="container__left__buttons__btn-hide" id="about">
+                About<span class="container__left__hidden-column" data-hidden="off"></span>
+            </button>
+            <button class="container__left__buttons__btn-hide" id="eyeColor">
+                Eye color<span class="container__left__hidden-column" data-hidden="off"></span>
+            </button>
+        </div>
+
+        <div class="container__left__pagination"></div>
+    </div>
+    <div class="container__right">
+        <div class="editor">
+            <form class="editor__form hidden" autocomplete="off">
+                <button class="editor__save-btn">Сохранить</button>
+                <button class="editor__cancel-btn">Отмена</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+
+
